@@ -53,11 +53,11 @@ body.admin-bar .site-header {
       .site-header .main-navigation .main-menu li a {
         font-size: 18px;
         font-weight: 500;
-        color: #191919; }
+        color: #152945; }
       .site-header .main-navigation .main-menu li svg {
         max-width: 20px; }
         .site-header .main-navigation .main-menu li svg path:nth-child(1) {
-          fill: #191919; }
+          fill: #152945; }
       .site-header .main-navigation .main-menu li.button__more svg {
         display: none; }
       .site-header .main-navigation .main-menu li.button__more .sub-menu {
@@ -71,7 +71,8 @@ body.admin-bar .site-header {
         position: absolute;
         right: 0;
         top: -1px;
-        margin-right: 0; }
+        margin-right: 0;
+        box-shadow: 0 36px 51px 0 rgba(0, 0, 0, 0.1); }
         .site-header .main-navigation .main-menu li.button__tickets a {
           transition: background-color 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), color 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
           background-color: #FFBB02;
@@ -87,7 +88,7 @@ body.admin-bar .site-header {
             display: none; }
           .site-header .main-navigation .main-menu li.button__tickets a:hover {
             background-color: white;
-            color: #FFBB02; }
+            color: #FFBB02 !important; }
     .site-header .main-navigation .main-menu > li:not(.menu-item-has-children) > a::before {
       transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
       content: " ";
@@ -155,76 +156,105 @@ body.admin-bar .site-header {
     .site-header .main-navigation .main-menu li.menu-item-has-children:hover .sub-menu {
       pointer-events: auto; }
 
-.site-footer {
+#colophon {
   background-color: #FFBB02;
   font-family: "Cabin", sans-serif;
   position: relative; }
-  .site-footer::after {
+  #colophon::after {
     content: " ";
     width: 100%;
     height: 1px;
     position: absolute;
     left: 0;
-    top: 262px;
+    top: 280px;
     background-color: white; }
-  .site-footer .widget-area {
+  #colophon .widget-area {
     margin-top: 50px !important;
-    margin-bottom: 50px !important; }
-    .site-footer .widget-area .widget-column {
+    margin-bottom: 10px !important; }
+    #colophon .widget-area .widget-column {
       max-width: 1200px;
       margin: auto;
-      display: -ms-grid;
-      display: grid;
-      -ms-grid-columns: 1fr 1fr 1fr 1fr;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-      -ms-grid-rows: 180px auto;
-          grid-template-rows: 180px auto; }
-      .site-footer .widget-area .widget-column .widget:nth-of-type(1) {
+      display: -ms-grid !important;
+      display: grid !important;
+      -ms-grid-columns: 1.2fr 1fr 1fr 2fr;
+          grid-template-columns: 1.2fr 1fr 1fr 2fr;
+      -ms-grid-rows: 240px auto;
+          grid-template-rows: 240px auto;
+      -ms-flex-line-pack: start;
+          align-content: start;
+      grid-gap: 50px 30px; }
+      #colophon .widget-area .widget-column .widget {
+        width: auto;
+        margin: 0; }
+        #colophon .widget-area .widget-column .widget h2 {
+          font-size: 16px;
+          margin: 0;
+          display: block;
+          padding-bottom: 20px;
+          font-weight: 600;
+          color: #152945; }
+          #colophon .widget-area .widget-column .widget h2::before {
+            display: none; }
+        #colophon .widget-area .widget-column .widget p {
+          margin-top: 0; }
+        #colophon .widget-area .widget-column .widget a {
+          color: white; }
+          #colophon .widget-area .widget-column .widget a:hover {
+            border-bottom: 1px solid white; }
+        #colophon .widget-area .widget-column .widget > div {
+          color: white;
+          font-size: 16px; }
+      #colophon .widget-area .widget-column .widget:nth-of-type(1) {
+        -ms-grid-row: 1;
+            grid-row-start: 1;
         -ms-grid-column: 1;
             grid-column-start: 1;
         grid-column-end: 3;
-        -ms-grid-row: 1;
-            grid-row-start: 1;
-        color: white;
-        margin: 0; }
-        .site-footer .widget-area .widget-column .widget:nth-of-type(1) h3 {
+        color: white; }
+        #colophon .widget-area .widget-column .widget:nth-of-type(1) h3 {
           font-size: 45px;
           max-width: 360px;
           margin-bottom: 0;
           font-weight: 500; }
-        .site-footer .widget-area .widget-column .widget:nth-of-type(1) p {
+        #colophon .widget-area .widget-column .widget:nth-of-type(1) p {
           margin: 0;
           font-size: 18px; }
-      .site-footer .widget-area .widget-column .widget:nth-of-type(2) {
-        -ms-grid-column: 2;
-            grid-column-start: 2;
-        grid-column-end: 4;
+      #colophon .widget-area .widget-column .widget:nth-of-type(2) {
         -ms-grid-row: 1;
             grid-row-start: 1;
-        margin: 0; }
-        .site-footer .widget-area .widget-column .widget:nth-of-type(2) h2 {
+        -ms-grid-column: 3;
+            grid-column-start: 3;
+        grid-column-end: 5; }
+        #colophon .widget-area .widget-column .widget:nth-of-type(2) h2 {
           display: none; }
-        .site-footer .widget-area .widget-column .widget:nth-of-type(2) form {
+        #colophon .widget-area .widget-column .widget:nth-of-type(2) .success {
+          max-width: 400px; }
+          #colophon .widget-area .widget-column .widget:nth-of-type(2) .success p {
+            color: white;
+            font-size: 18px;
+            line-height: 1.5; }
+        #colophon .widget-area .widget-column .widget:nth-of-type(2) form {
           position: relative;
           margin-top: 55px; }
-          .site-footer .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-email {
+          #colophon .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-email {
             border: none;
             position: relative;
             z-index: 0; }
-            .site-footer .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-email label {
+            #colophon .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-email label {
               display: none; }
-            .site-footer .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-email input {
+            #colophon .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-email input {
               transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+              box-shadow: 0 36px 51px 0 rgba(0, 0, 0, 0.1);
               border-radius: 30px;
               font-family: "Cabin", sans-serif !important;
               font-size: 20px;
               border: none;
-              padding: 15px 30px;
+              padding: 13px 30px;
               outline: none; }
-          .site-footer .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-submit {
+          #colophon .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-submit {
             margin: 0;
             z-index: 1; }
-            .site-footer .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-submit button {
+            #colophon .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-submit button {
               transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
               background-color: #FFBB02;
               border-radius: 30px;
@@ -233,11 +263,48 @@ body.admin-bar .site-header {
               cursor: pointer;
               position: absolute;
               top: 7px;
-              right: 35px; }
-              .site-footer .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-submit button:hover {
-                box-shadow: 0 0 15px rgba(15, 41, 48, 0.3); }
-      .site-footer .widget-area .widget-column .widget:nth-of-type(3) {
-        display: none; }
+              right: 35px;
+              outline: none;
+              border: 2px solid #FFBB02;
+              padding: 13px 20px 13px 20px; }
+              #colophon .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-submit button:hover {
+                background-color: white;
+                color: #FFBB02; }
+      #colophon .widget-area .widget-column .widget:nth-of-type(3) {
+        -ms-grid-row: 2;
+            grid-row-start: 2;
+        -ms-grid-column: 1;
+            grid-column-start: 1;
+        grid-column-end: 2; }
+        #colophon .widget-area .widget-column .widget:nth-of-type(3) > div {
+          color: white;
+          line-height: 1.4; }
+          #colophon .widget-area .widget-column .widget:nth-of-type(3) > div > div {
+            margin-bottom: 10px; }
+      #colophon .widget-area .widget-column .widget:nth-of-type(4) {
+        -ms-grid-row: 2;
+            grid-row-start: 2;
+        -ms-grid-column: 3;
+            grid-column-start: 3;
+        grid-column-end: 2; }
+      #colophon .widget-area .widget-column .widget:nth-of-type(5) {
+        -ms-grid-row: 2;
+            grid-row-start: 2;
+        -ms-grid-column: 3;
+            grid-column-start: 3;
+        grid-column-end: 4; }
+      #colophon .widget-area .widget-column .widget:nth-of-type(6) {
+        -ms-grid-row: 2;
+            grid-row-start: 2;
+        -ms-grid-column: 4;
+            grid-column-start: 4;
+        grid-column-end: 4; }
+        #colophon .widget-area .widget-column .widget:nth-of-type(6) ul {
+          margin: 0; }
+          #colophon .widget-area .widget-column .widget:nth-of-type(6) ul li {
+            margin: 0; }
+            #colophon .widget-area .widget-column .widget:nth-of-type(6) ul li a {
+              font-size: 16px; }
 
 #colophon .site-info {
   max-width: 1200px;
