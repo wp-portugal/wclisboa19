@@ -1,0 +1,120 @@
+.site-footer {
+	background-color: $color-primary;
+	font-family: $font-family;
+	position: relative;
+
+	&::after {
+		content: " ";
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		left: 0;
+		top: 262px;
+		background-color: white;
+	}
+
+
+	// Widgets
+	.widget-area {
+		margin-top: 50px !important;
+		margin-bottom: 50px !important;
+
+		.widget-column {
+			max-width: $max-page-width;
+			margin: auto;
+
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 180px auto;
+
+
+			// Text
+			.widget:nth-of-type(1) {
+				grid-column-start: 1;
+				grid-column-end: 3;
+				grid-row-start: 1;
+				color: white;
+				margin: 0;
+
+				h3 {
+					font-size: 45px;
+					max-width: 360px;
+					margin-bottom: 0;
+					font-weight: 500;
+				}
+
+				p {
+					margin: 0;
+					font-size: 18px;
+				}
+			}
+
+			// Nl Form
+			.widget:nth-of-type(2) {
+				grid-column-start: 2;
+				grid-column-end: 4;
+				grid-row-start: 1;
+				margin: 0;
+
+				h2 {
+					display: none;
+				}
+
+				form {
+					position: relative;
+					margin-top: 55px;
+
+					#subscribe-email {
+						border: none;
+						position: relative;
+						z-index: 0;
+						label { display: none; }
+						input {
+							transition: all 0.6s $easeOutQuart;
+							border-radius: 30px;
+							font-family: $font-family !important;
+							font-size: 20px;
+							border: none;
+							padding: 15px 30px;
+							outline: none;
+						}
+					}
+
+					#subscribe-submit {
+						margin: 0;
+						z-index: 1;
+						button {
+							transition: all 0.6s $easeOutQuart;
+							background-color: $color-primary;
+							border-radius: 30px;
+							font-weight: 600;
+							font-size: 16px;
+							cursor: pointer;
+							position: absolute;
+							top: 7px;
+							right: 35px;
+
+							&:hover {
+								box-shadow: 0 0 15px rgba(15,41,48,.3);
+							}
+						}
+					}
+				}
+			}
+
+			.widget:nth-of-type(3) {
+				display: none;
+			}
+		}
+	}
+
+}
+
+// Credits
+#colophon .site-info {
+	max-width: $max-page-width;
+	margin: auto;
+	color: white !important;
+	padding: 15px 0 15px 0;
+	border-top: 1px solid rgba(white, 0.3);
+}

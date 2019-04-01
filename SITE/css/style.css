@@ -1,0 +1,257 @@
+/**
+ * Main Style File
+ *
+ * @package @@pkg.name
+ * @version @@pkg.version
+ * @author  @@pkg.author
+ */
+/**
+* Vars */
+/**
+* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,600");
+/**
+* Helpers */
+/**
+* Helpers */
+.block__page-header {
+  background-color: red; }
+
+/**
+* Layout */
+body.admin-bar .site-header {
+  top: 32px; }
+
+.site-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 32px 40px 32px 50px; }
+  .site-header .site-title, .site-header .site-description {
+    display: none; }
+  .site-header .site-branding {
+    margin: 0; }
+    .site-header .site-branding::before {
+      content: " ";
+      width: 250px;
+      height: 100px;
+      position: absolute;
+      left: -40px;
+      top: -38px;
+      background: url("http://wclisboa19.local/media/logo.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 80%; }
+  .site-header .main-navigation {
+    padding-left: 220px; }
+    .site-header .main-navigation .main-menu li {
+      margin-right: 5px; }
+      .site-header .main-navigation .main-menu li a {
+        font-size: 18px;
+        font-weight: 500;
+        color: #191919; }
+      .site-header .main-navigation .main-menu li svg {
+        max-width: 20px; }
+        .site-header .main-navigation .main-menu li svg path:nth-child(1) {
+          fill: #191919; }
+      .site-header .main-navigation .main-menu li.button__more svg {
+        display: none; }
+      .site-header .main-navigation .main-menu li.button__more .sub-menu {
+        left: -12px !important; }
+      .site-header .main-navigation .main-menu li.button__english {
+        position: absolute;
+        right: 140px;
+        top: 0;
+        margin-right: 0; }
+      .site-header .main-navigation .main-menu li.button__tickets {
+        position: absolute;
+        right: 0;
+        top: -1px;
+        margin-right: 0; }
+        .site-header .main-navigation .main-menu li.button__tickets a {
+          transition: background-color 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), color 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+          background-color: #FFBB02;
+          border: 2px solid #FFBB02;
+          border-radius: 50px;
+          padding: 12px 28px;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 15px;
+          line-height: 1;
+          color: white; }
+          .site-header .main-navigation .main-menu li.button__tickets a::before {
+            display: none; }
+          .site-header .main-navigation .main-menu li.button__tickets a:hover {
+            background-color: white;
+            color: #FFBB02; }
+    .site-header .main-navigation .main-menu > li:not(.menu-item-has-children) > a::before {
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+      content: " ";
+      width: 0;
+      height: 1px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -34px;
+      background-color: #FFBB02; }
+    .site-header .main-navigation .main-menu > li:not(.menu-item-has-children) > a:hover {
+      color: black; }
+      .site-header .main-navigation .main-menu > li:not(.menu-item-has-children) > a:hover:before {
+        width: 100%; }
+    .site-header .main-navigation .main-menu .sub-menu {
+      transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 23px 33px -10px rgba(0, 0, 0, 0.2);
+      will-change: opacity,transform;
+      z-index: 10;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      transform: translateY(15px) !important;
+      padding: 15px 10px;
+      pointer-events: none; }
+      .site-header .main-navigation .main-menu .sub-menu::before {
+        content: " ";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: 15px;
+        top: -7px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transform: rotate(45deg);
+        border-right: none;
+        border-bottom: none;
+        z-index: 1;
+        background: white; }
+      .site-header .main-navigation .main-menu .sub-menu::after {
+        content: " ";
+        width: 110%;
+        height: 30px;
+        position: absolute;
+        left: -5%;
+        top: -15px;
+        background: transparent; }
+      .site-header .main-navigation .main-menu .sub-menu li {
+        margin: 0; }
+        .site-header .main-navigation .main-menu .sub-menu li a {
+          position: relative;
+          background: transparent;
+          padding: 7px 15px; }
+          .site-header .main-navigation .main-menu .sub-menu li a::before {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+            content: " ";
+            width: 1px;
+            height: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -11px;
+            background-color: #FFBB02; }
+          .site-header .main-navigation .main-menu .sub-menu li a:hover::before {
+            height: 100%; }
+    .site-header .main-navigation .main-menu li.menu-item-has-children:hover .sub-menu {
+      pointer-events: auto; }
+
+.site-footer {
+  background-color: #FFBB02;
+  font-family: "Cabin", sans-serif;
+  position: relative; }
+  .site-footer::after {
+    content: " ";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 262px;
+    background-color: white; }
+  .site-footer .widget-area {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important; }
+    .site-footer .widget-area .widget-column {
+      max-width: 1200px;
+      margin: auto;
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 1fr 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+      -ms-grid-rows: 180px auto;
+          grid-template-rows: 180px auto; }
+      .site-footer .widget-area .widget-column .widget:nth-of-type(1) {
+        -ms-grid-column: 1;
+            grid-column-start: 1;
+        grid-column-end: 3;
+        -ms-grid-row: 1;
+            grid-row-start: 1;
+        color: white;
+        margin: 0; }
+        .site-footer .widget-area .widget-column .widget:nth-of-type(1) h3 {
+          font-size: 45px;
+          max-width: 360px;
+          margin-bottom: 0;
+          font-weight: 500; }
+        .site-footer .widget-area .widget-column .widget:nth-of-type(1) p {
+          margin: 0;
+          font-size: 18px; }
+      .site-footer .widget-area .widget-column .widget:nth-of-type(2) {
+        -ms-grid-column: 2;
+            grid-column-start: 2;
+        grid-column-end: 4;
+        -ms-grid-row: 1;
+            grid-row-start: 1;
+        margin: 0; }
+        .site-footer .widget-area .widget-column .widget:nth-of-type(2) h2 {
+          display: none; }
+        .site-footer .widget-area .widget-column .widget:nth-of-type(2) form {
+          position: relative;
+          margin-top: 55px; }
+          .site-footer .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-email {
+            border: none;
+            position: relative;
+            z-index: 0; }
+            .site-footer .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-email label {
+              display: none; }
+            .site-footer .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-email input {
+              transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+              border-radius: 30px;
+              font-family: "Cabin", sans-serif !important;
+              font-size: 20px;
+              border: none;
+              padding: 15px 30px;
+              outline: none; }
+          .site-footer .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-submit {
+            margin: 0;
+            z-index: 1; }
+            .site-footer .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-submit button {
+              transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+              background-color: #FFBB02;
+              border-radius: 30px;
+              font-weight: 600;
+              font-size: 16px;
+              cursor: pointer;
+              position: absolute;
+              top: 7px;
+              right: 35px; }
+              .site-footer .widget-area .widget-column .widget:nth-of-type(2) form #subscribe-submit button:hover {
+                box-shadow: 0 0 15px rgba(15, 41, 48, 0.3); }
+      .site-footer .widget-area .widget-column .widget:nth-of-type(3) {
+        display: none; }
+
+#colophon .site-info {
+  max-width: 1200px;
+  margin: auto;
+  color: white !important;
+  padding: 15px 0 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3); }
+
+body .site {
+  font-family: "Cabin", sans-serif;
+  padding-top: 100px; }
+  body .site .site-main article.page > .entry-header {
+    display: none; }
+  body .site .site-main .entry-content {
+    background: rgba(255, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: auto; }

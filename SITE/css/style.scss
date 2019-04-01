@@ -1,0 +1,44 @@
+/**
+ * Main Style File
+ *
+ * @package @@pkg.name
+ * @version @@pkg.version
+ * @author  @@pkg.author
+ */
+
+/**
+* Vars */
+$site-url: 'http://wclisboa19.local';
+$color-primary: #FFBB02;
+$color-text: #191919;
+$box-shadow: 0 23px 33px -10px rgba(0, 0, 0, 0.2);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$max-page-width:1200px;
+$max-page-width:1200px;
+$font-family: 'Cabin', sans-serif;
+
+/**
+* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600');
+
+/**
+* Helpers */
+@import './helpers/borders.scss';
+@import './helpers/colors.scss';
+@import './helpers/effects.scss';
+@import './helpers/estructure.scss';
+@import './helpers/media.scss';
+@import './helpers/text.scss';
+
+/**
+* Helpers */
+@import './blocks/page-header.scss';
+
+/**
+* Layout */
+@import './layout/header.scss';
+@import './layout/footer.scss';
+@import './layout/layout.scss';
+
+
+

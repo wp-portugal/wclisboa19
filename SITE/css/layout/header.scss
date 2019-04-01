@@ -1,0 +1,196 @@
+body.admin-bar .site-header {
+	top: 32px;
+}
+
+.site-header {
+	border-bottom: 1px solid rgba(black, 0.1);
+	background: white;
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	padding: 32px 40px 32px 50px;
+	//box-shadow: 0 6px 20px rgba(15,41,48,.05);
+
+	// Hide Text
+	.site-title, .site-description {
+		display: none;
+	}
+
+	// Add Logo
+	.site-branding {
+		margin: 0;
+
+		&::before {
+			content: " ";
+			width: 250px;
+			height: 100px;
+			position: absolute;
+			left: -40px;
+			top: -38px;
+			background: url('#{$site-url}/media/logo.svg');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 80%;
+		}
+	}
+
+	.main-navigation {
+		padding-left: 220px;
+
+		// Menu
+		.main-menu {
+			li {
+				margin-right: 5px;
+				a {
+					font-size: 18px;
+					font-weight: 500;
+					color: $color-text;
+				}
+				svg {
+					max-width: 20px;
+					path:nth-child(1) { fill: $color-text; }
+				}
+
+				// More Button
+				&.button__more {
+					svg { display: none; }
+					.sub-menu {
+						left: -12px !important;
+					}
+				}
+
+				// English Menu
+				&.button__english {
+					position: absolute;
+					right: 140px;
+					top: 0;
+					margin-right: 0;
+				}
+
+				// Ticket Button
+				&.button__tickets {
+					position: absolute;
+					right: 0;
+					top: -1px;
+					margin-right: 0;
+					a {
+						transition: background-color 0.6s $easeOutQuart, color 0.6s $easeOutQuart;
+						background-color: $color-primary;
+						border: 2px solid $color-primary;
+						border-radius: 50px;
+						padding: 12px 28px;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: 15px;
+						line-height: 1;
+						color: white;
+						&::before { display: none; }
+						&:hover {
+							background-color: white;
+							color: $color-primary;
+						}
+					}
+				}
+			}
+
+			// Hover First Level
+			> li:not(.menu-item-has-children) > a {
+				&::before {
+					transition: all 0.4s $easeOutQuart !important;
+					content: " ";
+					width: 0;
+					height: 1px;
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					bottom: -34px;
+					background-color: $color-primary;
+				}
+				&:hover {
+					color: black;
+					&:before { width: 100%; }
+				}
+			}
+
+			// Submenu
+			.sub-menu {
+				transition: opacity 0.6s $easeOutQuart;
+				background-color: white;
+				border-radius: 4px;
+				box-shadow: $box-shadow;
+				will-change: opacity,transform;
+				z-index: 10;
+				border: 1px solid rgba(black, 0.1);
+				transform: translateY(15px) !important;
+				padding: 15px 10px;
+				pointer-events: none;
+
+				&::before {
+					content: " ";
+					width: 15px;
+					height: 15px;
+					position: absolute;
+					left: 15px;
+					top: -7px;
+					border: 1px solid rgba(black, 0.1);
+					transform: rotate(45deg);
+					border-right: none;
+					border-bottom: none;
+					z-index: 1;
+					background: white;
+				}
+
+				&::after {
+					content: " ";
+					width: 110%;
+					height: 30px;
+					position: absolute;
+					left: -5%;
+					top: -15px;
+					background: transparent;
+				}
+
+				li {
+					margin: 0;
+					a {
+						position: relative;
+						background: transparent;
+						padding: 7px 15px;
+						&::before {
+							transition: all 0.4s $easeOutQuart !important;
+							content: " ";
+							width: 1px;
+							height: 0;
+							position: absolute;
+							top: 50%;
+							transform: translateY(-50%);
+							left: -11px;
+							background-color: $color-primary;
+						}
+
+						&:hover {
+							&::before { height: 100%; }
+						}
+					}
+				}
+
+
+			}
+
+			// Open Submenu
+			li.menu-item-has-children:hover {
+				.sub-menu {
+					pointer-events: auto;
+				}
+			}
+		}
+
+		// Mobile Trigger
+		.main-menu-more {
+
+		}
+
+	}
+}

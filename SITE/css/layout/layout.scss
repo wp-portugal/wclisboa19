@@ -1,0 +1,25 @@
+body {
+	//background: rgba(red, 0.1);
+
+	.site {
+		font-family: $font-family;
+		padding-top: 100px;
+
+		.site-main {
+			article.page {
+				> .entry-header {
+					display: none;
+				}
+
+			}
+			.entry-content {
+				background: rgba(red, 0.1);
+				max-width: $max-page-width;
+				margin: auto;
+			}
+
+		}
+
+	}
+
+}

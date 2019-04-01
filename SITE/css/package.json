@@ -1,0 +1,23 @@
+{
+  "name": "wclisboa-2019",
+  "version": "1.0.0",
+  "description": "Lisboa WordCamp 2019 website.",
+  "author": "",
+  "scripts": {
+    "dev": "gulp style"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-environments": "^0.1.1",
+    "gulp-include": "^2.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "include-media": "^1.4.9"
+  }
+}
