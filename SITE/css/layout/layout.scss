@@ -3,7 +3,8 @@ body {
 
 	.site {
 		font-family: $font-family;
-		padding-top: 100px;
+		padding-top: $menu-height;
+		overflow: hidden;
 
 		.site-main {
 			article.page {
@@ -13,9 +14,18 @@ body {
 
 			}
 			.entry-content {
-				background: rgba(red, 0.1);
+				//background: rgba(red, 0.1);
 				max-width: $max-page-width;
+				box-sizing: content-box;
 				margin: auto;
+
+				> * {
+					max-width: 100%;
+				}
+
+				.wp-block-columns {
+					max-width: 100%;
+				}
 			}
 
 		}

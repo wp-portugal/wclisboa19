@@ -1,0 +1,27 @@
+.title-large {
+	font-size: 45px;
+	margin-bottom: 0;
+	font-weight: 400;
+
+	strong {
+		font-weight: 600;
+	}
+}
+
+.title-description {
+	margin-bottom: 0;
+	font-size: 18px;
+	line-height: 1.72;
+	letter-spacing: -0.5px;
+	font-weight: 400;
+}
+
+.title-label {
+	color: $color-primary;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 1;
+	letter-spacing: 2.6px;
+	text-transform: uppercase;
+	margin: 0 0 10px 0;
+}

@@ -8,19 +8,22 @@
 
 /**
 * Vars */
-$site-url: 'http://wclisboa19.local';
+$site-url: 'https://press.care/wclisboa';
+//$site-url: 'http://wclisboa19.local'; 
 $color-primary: #FFBB02;
-$color-text: #152945;
+$color-gray: #F6F7FB;
+$color-text: #162944;
 $box-shadow: 0 23px 33px -10px rgba(0, 0, 0, 0.2);
 $box-shadow-2: 0 36px 51px 0 rgba(0,0,0,0.1);
 $easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
 $max-page-width:1200px;
+$menu-height: 95px;
 $max-page-width:1200px;
 $font-family: 'Cabin', sans-serif;
 
 /**
 * Fonts */
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:4300,400,500,600');
 
 /**
 * Helpers */
@@ -32,8 +35,10 @@ $font-family: 'Cabin', sans-serif;
 @import './helpers/text.scss';
 
 /**
-* Helpers */
+* Blocks */
 @import './blocks/page-header.scss';
+@import './blocks/header-home.scss';
+@import './blocks/button.scss';
 
 /**
 * Layout */

@@ -11,7 +11,6 @@ body.admin-bar .site-header {
 	width: 100%;
 	z-index: 100;
 	padding: 32px 40px 32px 50px;
-	//box-shadow: 0 6px 20px rgba(15,41,48,.05);
 
 	// Hide Text
 	.site-title, .site-description {
@@ -27,7 +26,7 @@ body.admin-bar .site-header {
 			width: 250px;
 			height: 100px;
 			position: absolute;
-			left: -40px;
+			left: calc( 50% - 715px );
 			top: -38px;
 			background: url('#{$site-url}/media/logo.svg');
 			background-repeat: no-repeat;
@@ -37,7 +36,9 @@ body.admin-bar .site-header {
 	}
 
 	.main-navigation {
-		padding-left: 220px;
+		padding-left: 150px;
+		max-width: $max-page-width;
+		margin: 0 auto;
 
 		// Menu
 		.main-menu {
@@ -63,16 +64,16 @@ body.admin-bar .site-header {
 
 				// English Menu
 				&.button__english {
-					position: absolute;
-					right: 140px;
-					top: 0;
-					margin-right: 0;
+					//position: absolute;
+					//right: 140px;
+					//top: 0;
+					//margin-right: 0;
 				}
 
 				// Ticket Button
 				&.button__tickets {
 					position: absolute;
-					right: 0;
+					right: calc( 50% - 600px);
 					top: -1px;
 					margin-right: 0;
 					box-shadow: $box-shadow-2;

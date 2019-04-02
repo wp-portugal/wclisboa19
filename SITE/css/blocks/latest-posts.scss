@@ -1,0 +1,9 @@
+body #primary {
+	.wp-block-latest-posts {
+		max-width: 100% !important;
+
+		a {
+			color: $color-text;
+		}
+	}
+}
